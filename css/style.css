@@ -2,10 +2,10 @@ body {
     background-image: url(https://static.wikia.nocookie.net/f47dd5fb-d181-44eb-bffa-d0aa6ad85a36);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 150% 0%;
+    background-position: 300% 0%;
     background-color: black;
     padding-top: 100px;
-    padding-left: 400px;
+    padding-left: 300px;
     color: white;
 }
 
@@ -13,4 +13,12 @@ quiz-questions {
     border: 3px solid gray;
     padding: 10px 40px 40px 40px;
     width: 50%;
+}
+
+button {
+    margin: 15px;
+    font-size: 25px;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    background-color:cyan;
 }

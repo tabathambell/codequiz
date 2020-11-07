@@ -16,6 +16,9 @@
 */
 
 var content = document.querySelector(".content");
+var timerEl = document.getElementById('countdown');
+var mainEl = document.getElementById('main');
+var startBtn = document.getElementById('start')
 
 function welcomePage() {
     var welcomeText = document.createElement("p");
@@ -28,58 +31,56 @@ function welcomePage() {
 
 // The array of questions for the game.
 var questions = [
-    { question: 'The sky is blue.', 
-    option: 'here',
-    option: 'here',
-    option: 'here',
-    option: 'here',
-    answer: 'here' },
-    { question: 'The sky is blue.', 
-    option: 'here',
-    option: 'here',
-    option: 'here',
-    option: 'here',
-    answer: 'here' },
-    { question: 'The sky is blue.', 
-    option: 'here',
-    option: 'here',
-    option: 'here',
-    option: 'here',
-    answer: 'here' },
-    { question: 'The sky is blue.', 
-    option: 'here',
-    option: 'here',
-    option: 'here',
-    option: 'here',
-    answer: 'here' },
-    { question: 'The sky is blue.', 
-    option: 'here',
-    option: 'here',
-    option: 'here',
-    option: 'here',
-    answer: 'here' },
+    { question1: 'The sky is blue.', 
+    option1: 'here',
+    option2: 'here',
+    option3: 'here',
+    option4: 'here',
+    answer1: 'here' },
+    { question2: 'The sky is blue.', 
+    option1: 'here',
+    option2: 'here',
+    option3: 'here',
+    option4: 'here',
+    answer2: 'here' },
+    { question3: 'The sky is blue.', 
+    option1: 'here',
+    option2: 'here',
+    option3: 'here',
+    option4: 'here',
+    answer3: 'here' },
+    { question4: 'The sky is blue.', 
+    option1: 'here',
+    option2: 'here',
+    option3: 'here',
+    option4: 'here',
+    answer4: 'here' },
+    { question5: 'The sky is blue.', 
+    option1: 'here',
+    option2: 'here',
+    option3: 'here',
+    option4: 'here',
+    answer5: 'here' },
   ];
-  // We start the game with a score of 0.
+  
   var score = 0;
-  // Loop over every question object
   for (var i = 0; i < questions.length; i++) {
-    // Display current question to user and ask OK/Cancel
+    
     var answer = confirm(questions[i].question);
     // Compare answers !!!!!!!THIS IS THE ONE I NEED HELP WITH!!!!!
     if (
-      
+      I DON'T KNOW WHAT I'M DOING
     ) {
-      // Increase score
       score++;
-      // Alert the user
       alert('Correct!');
     } else {
       alert('Wrong!');
     }
   }
-  // Show total at end
+ 
   alert('THE JIG IS UP. GAME OVER.');
-  alert('You got ' + score + '/' + questions.length);
+  alert('You received ' + score + 'out of' + questions.length);
+  return;
 
 for (i = 0; i < questions.length; i++) {
     var head = document.createElement("h2");
@@ -93,5 +94,32 @@ for (i = 0; i < questions.length; i++) {
     }
 }
 
+function countdown() {
+  var timeLeft = 60;
+
+  var timeInterval = setInterval(function() {
+    if(timeLeft <= 0){
+      clearInterval(timeInterval);
+      timerEl.textContent = "Done";
+      displayMessage();
+    } else {
+      timerEl.textContent = timeLeft + " seconds left";
+    }
+    timeLeft -= 1;
+  }, 1000);
+}
+
+  var msgInterval = setInterval(function() {
+    if (words[wordCount] === undefined) {
+      clearInterval(msgInterval);
+    } else {
+      mainEl.textContent = words[wordCount];
+      wordCount++;
+    }
+  }, 300);
+}
+
+startBtn.onclick = countdown;
 // welcome page call
 welcomePage();
+button.addEventListener("onMouseUp", function);
