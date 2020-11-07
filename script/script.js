@@ -16,9 +16,6 @@
 */
 
 var content = document.querySelector(".content");
-var questionNumber = 0;
-var correct = 0;
-var quizStatus, quizQuestions, question, option, options, choice1, choice2, choice3, choice4;
 
 function welcomePage() {
     var welcomeText = document.createElement("p");
@@ -29,54 +26,60 @@ function welcomePage() {
     content.appendChild(btnStart);
 };
 
-//creating questions
+// The array of questions for the game.
 var questions = [
-{
-    question: "Who was the killer in the 1980 slasher classic, Friday the 13th?",
-    a: "Jason Vorhees",
-    b: "Crazy Ralph",
-    c: "Pamela Vorhees",
-    d: "Jack Burrell",
-    answer: "c"
-},
-{
-    question: "Who played Regan MacNeil in the 1973 film, The Exorcist?",
-    a: "Donna Mitchell",
-    b: "Kitty Winn",
-    c: "Ellen Burstyn",
-    d: "Linda Blair",
-    answer: "d"
-},
-{
-    question: "We all know that John Carpenter's most famous film is Halloween, but what was his FIRST full-length feature film?",
-    a: "Dark Star",
-    b: "They Live",
-    c: "Escape from New York",
-    d: "The Thing",
-    answer: "a"
-},
-{
-    question: "How many years does it take for Pennywise, the Dancing Clown of IT fame take to return to feed on Derry, Maine's children?",
-    a: "27",
-    b: "30",
-    c: "37",
-    d: "10",
-    answer: "a"
-},
-{
-    question: "The Blair Witch Project released in 1999. What term did it modernize due to it's filming style?",
-    a: "Shaky cam",
-    b: "Splatter",
-    c: "Found footage",
-    d: "Grindhouse",
-    answer: "c"
-},
-
-];
-
-function get(x) {
-    return document.getElementById(x);
-}
+    { question: 'The sky is blue.', 
+    option: 'here',
+    option: 'here',
+    option: 'here',
+    option: 'here',
+    answer: 'here' },
+    { question: 'The sky is blue.', 
+    option: 'here',
+    option: 'here',
+    option: 'here',
+    option: 'here',
+    answer: 'here' },
+    { question: 'The sky is blue.', 
+    option: 'here',
+    option: 'here',
+    option: 'here',
+    option: 'here',
+    answer: 'here' },
+    { question: 'The sky is blue.', 
+    option: 'here',
+    option: 'here',
+    option: 'here',
+    option: 'here',
+    answer: 'here' },
+    { question: 'The sky is blue.', 
+    option: 'here',
+    option: 'here',
+    option: 'here',
+    option: 'here',
+    answer: 'here' },
+  ];
+  // We start the game with a score of 0.
+  var score = 0;
+  // Loop over every question object
+  for (var i = 0; i < questions.length; i++) {
+    // Display current question to user and ask OK/Cancel
+    var answer = confirm(questions[i].question);
+    // Compare answers !!!!!!!THIS IS THE ONE I NEED HELP WITH!!!!!
+    if (
+      
+    ) {
+      // Increase score
+      score++;
+      // Alert the user
+      alert('Correct!');
+    } else {
+      alert('Wrong!');
+    }
+  }
+  // Show total at end
+  alert('THE JIG IS UP. GAME OVER.');
+  alert('You got ' + score + '/' + questions.length);
 
 for (i = 0; i < questions.length; i++) {
     var head = document.createElement("h2");
