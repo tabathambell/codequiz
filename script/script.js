@@ -59,6 +59,7 @@ var correctP = document.getElementById('correct');
 var formEl = document.getElementById('form');
 var subBtn = document.getElementById('submit');
 var initialsEl = document.getElementById('initials');
+var storedP = document.getElementById('stored');
 
 var a1Btn = document.getElementById('option1');
 var a2Btn = document.getElementById('option2');
@@ -160,9 +161,32 @@ function countdown() {
   }, 1000);
 }
 
+
+
 function storeInitials() {
-  var initials = initialsEl.value; 
-  
+  var initials = initialsEl.value;
+  var storedScore = localStorage.getItem(initials);
+
+  if (storedScore === null) {
+    storedP.textContent = "You don't have an existing high score! We have stored this one!";
+    localStorage.setItem(initials, score);
+  } else {
+    if (storedScore < score) {
+      storedP.textContent = "New high score!";
+      localStorage.setItem(initials, score);
+    } else {
+      storedP.textContent = "You didn't beat your last high score!";
+    }
+  }
+
+  var keys = Object.keys(localStorage);
+  var list = document.createElement("ul");
+  formEl.appendChild(list);
+  for (i = 0; i < keys.length; i++) {
+    var item = document.createElement("li");
+    item.innerHTML = "<span class='scoreInit'>" + keys[i] + "</span>: <span class='scoreNum'>" + localStorage.getItem(keys[i]) + "</span>";
+    list.appendChild(item);
+  }
 }
 
 // welcome page call
