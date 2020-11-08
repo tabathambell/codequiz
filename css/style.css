@@ -2,7 +2,7 @@ body {
     background-image: url(https://i.pinimg.com/originals/46/be/1b/46be1b34317dc4d99317305c99ff213e.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 0% 200%;
+    background-position: right;
     background-color: black;
     padding-top: 100px;
     padding-left: 300px;
@@ -21,4 +21,12 @@ button {
     padding: 10px 10px 10px 10px;
     position: relative;
     background-color:cyan;
+}
+
+#countdown {
+
+}
+
+#correct {
+    
 }
