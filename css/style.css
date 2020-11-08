@@ -20,7 +20,7 @@ button {
     font-size: 25px;
     padding: 10px 10px 10px 10px;
     position: relative;
-    background-color:cyan;
+    background-color: #581F18;
 }
 
 #countdown {
@@ -28,5 +28,5 @@ button {
 }
 
 #correct {
-    
+
 }

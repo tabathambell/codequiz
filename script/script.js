@@ -161,8 +161,7 @@ function countdown() {
   }, 1000);
 }
 
-
-
+// creating local storage for high scores
 function storeInitials() {
   var initials = initialsEl.value;
   var storedScore = localStorage.getItem(initials);
