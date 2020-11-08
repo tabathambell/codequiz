@@ -181,6 +181,7 @@ function storeInitials() {
   var keys = Object.keys(localStorage);
   var list = document.createElement("ul");
   formEl.appendChild(list);
+  console.log(keys)
   for (i = 0; i < keys.length; i++) {
     var item = document.createElement("li");
     item.innerHTML = "<span class='scoreInit'>" + keys[i] + "</span>: <span class='scoreNum'>" + localStorage.getItem(keys[i]) + "</span>";
