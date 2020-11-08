@@ -17,36 +17,36 @@
 
 // The array of questions for the game.
 var questions = [
-    { question: 'The sky is blue.', 
-    option1: 'here',
-    option2: 'here',
-    option3: 'here',
-    option4: 'here',
+    { question: 'Who is the killer in the 1980 slasher classic "Friday the 13th"?', 
+    option1: 'Pamela Vorhees',
+    option2: 'Alice Hardy',
+    option3: 'Jason Vorhees',
+    option4: 'Crazy Ralph',
     answer: 1 },
-    { question: 'The sky is blue.', 
-    option1: 'here',
-    option2: 'here',
-    option3: 'here',
-    option4: 'here',
-    answer: 1 },
-    { question: 'The sky is blue.', 
-    option1: 'here',
-    option2: 'here',
-    option3: 'here',
-    option4: 'here',
-    answer: 1 },
-    { question: 'The sky is blue.', 
-    option1: 'here',
-    option2: 'here',
-    option3: 'here',
-    option4: 'here',
-    answer: 1 },
-    { question: 'The sky is blue.', 
-    option1: 'here',
-    option2: 'here',
-    option3: 'here',
-    option4: 'here',
-    answer: 1 },
+    { question: 'The Blair Witch Project came out in 1999. What modern film style did it establish?', 
+    option1: 'Splatter film',
+    option2: 'Gore fest',
+    option3: 'Shaky cam',
+    option4: 'Found footage',
+    answer: 4 },
+    { question: 'Boris Karloff is one of the original Universal Monsters actors of the black and white era of film. Which TWO Universal Monsters did he portray?', 
+    option1: 'Dracula & Invisible Man',
+    option2: 'Frankenstein & The Mummy',
+    option3: 'The Wolfman & Frankenstein',
+    option4: 'The Mummy & Dracula',
+    answer: 2 },
+    { question: 'Who wrote both the novel and the screenplay for the 1973 horror classic "The Exorcist"?', 
+    option1: 'John Carpenter',
+    option2: 'William Peter Blatty',
+    option3: 'Stephen King',
+    option4: 'Martin Scorcese',
+    answer: 2 },
+    { question: 'Skeet Ulrich and Neve Campbell are known for their roles as Billy Loomis and Sydney Prescott in "Scream", but what other 1996 film did they have supporting roles together in?', 
+    option1: 'Ride With the Devil',
+    option2: 'Deliverance Creek',
+    option3: 'Wild Things',
+    option4: 'The Craft',
+    answer: 4 },
   ];
 
   // Put DOM elements here
@@ -86,9 +86,9 @@ function nextQuestion() {
   if (currentQuestion >= questions.length) {
     quizQEl.setAttribute("style", "display: none;");
     introP.setAttribute("style", "display: default;");
-    quizSEl.textContent = "THE JIG IS UP";
+    quizSEl.textContent = "THE JIG IS UP. GAME OVER.";
     introP.textContent = "You got " + score + " out of a possible " + questions.length + 
-      " questions correct! Refresh the page to play again!";
+      " questions correct. Refresh to try your luck again.";
     formEl.setAttribute("style", "display: default;");
 
   } else {
@@ -148,7 +148,7 @@ function countdown() {
       quizQEl.setAttribute("style","display: none;");
       introP.setAttribute("style","display: default;");
       quizSEl.innerText = "THE JIG IS UP!";
-      introP.innerText = "You ran out of time! You got " + score + " out of a possible " + questions.length + 
+      introP.innerText = "The jig is up! You got " + score + " out of a possible " + questions.length + 
         " questions correct! Refresh the page to play again!";
     } else if (currentQuestion >= questions.length) {
       clearInterval(timeInterval);

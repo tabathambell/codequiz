@@ -7,12 +7,12 @@ body {
     padding-top: 100px;
     padding-left: 300px;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 quiz-questions {
-    border: 3px solid gray;
+    border: 3px solid brown;
     padding: 10px 40px 40px 40px;
-    width: 50%;
 }
 
 button {
@@ -23,10 +23,84 @@ button {
     background-color: #581F18;
 }
 
-#countdown {
+img {
+    width: 1000px;
+}
 
+#quiz-status {
+    width: 1000px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 6px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+#intro {
+    font-size: 22px;
+    width: 1000px;
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding-bottom: 5px;
+}
+
+#go {
+    width: auto;
+}
+
+.start {
+    padding-left: 350px;
+}
+
+.quiz-questions {
+    text-align: center;
+    padding-right: 1100px;
+    padding-bottom: 50px;
+}
+
+.end {
+    text-align: center;
+    font-size: 24px;
+    padding-right: 1100px;
+}
+
+button {
+    color: white;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+}
+
+#countdown {
+    font-size: 18px;
+    text-align: left;
+    margin-left: 400px;
+}
+
+ul li {
+    list-style-type: none;
+    font-size: 20px;
+    width: 500px;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    border-style: solid;
+    border-color: #581F18;
+    
+}
+
+#stored {
+    text-align: center;
+    margin-left: 250px;
+}
+
+#initials {
+    height: 26px;
+    font-size: 24px;
 }
 
 #correct {
-
+    text-align: left;
+    padding-left: 300px;
 }
