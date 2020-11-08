@@ -75,18 +75,18 @@ function nextQuestion() {
   if (currentQuestion >= questions.length) {
     quizQEl.setAttribute("style", "display: none;");
     introP.setAttribute("style", "display: default;");
-    quizSEl.innerText = "THE JIG IS UP";
-    introP.innerText = "You got " + score + " out of a possible " + questions.length +
+    quizSEl.textContent = "THE JIG IS UP";
+    introP.textContent = "You got " + score + " out of a possible " + questions.length +
       " questions correct! Refresh the page the play again!";
   } else {
     if (currentQuestion <= 0) {
       introP.setAttribute("style","display: none;");
-      goBtn.setAttribute("style","display: none");
+      goBtn.setAttribute("style","display: none;");
       quizQEl.setAttribute("style","display: default;");
       countdown();
     }
   
-    quizSEl.innerText "Question " + (currentQuestion + 1) + ": " + questions[currentQuestion].question;
+    quizSEl.innerText = "Question " + (currentQuestion + 1) + ": " + questions[currentQuestion].question;
     a1Btn.innerText = questions[currentQuestion].option1;
     a2Btn.innerText = questions[currentQuestion].option2;
     a3Btn.innerText = questions[currentQuestion].option3;
@@ -129,3 +129,10 @@ function countdown();
 
 // welcome page call
 welcomePage();
+
+// Added onclicks for question advancement
+goBtn.onclick = nextQuestion;
+a1Btn.onclick = checkAnswer1;
+a2Btn.onclick = checkAnswer2;
+a3Btn.onclick = checkAnswer3;
+a4Btn.onclick = checkAnswer4;
